@@ -24,11 +24,10 @@ namespace ClasseComTresAtrubutos
             y.B = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
             y.C = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            double P = (x.A + x.B + x.C) / 2;
-            double AreaX = Math.Sqrt(P * (P - x.A) * (P - x.B) * (P - x.C));
 
-            P = (y.A + y.B + y.C) / 2;
-            double AreaY = Math.Sqrt(P * (P - y.A) * (P - y.B) * (P - y.C));
+            double AreaX = x.Area();
+
+            double AreaY = y.Area();
 
             Console.WriteLine("Area de X igual a: " + AreaX.ToString("F4", CultureInfo.InvariantCulture));
 
