@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExemploMatris
+namespace ExemploMatriz
 {
     internal class Program
     {
