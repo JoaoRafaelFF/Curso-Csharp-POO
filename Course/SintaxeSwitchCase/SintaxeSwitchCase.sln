@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SintaxeSwitchCase", "SintaxeSwitchCase\SintaxeSwitchCase.csproj", "{FF9C4266-8FB6-42B7-B533-DF8FCE80B3EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF9C4266-8FB6-42B7-B533-DF8FCE80B3EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF9C4266-8FB6-42B7-B533-DF8FCE80B3EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF9C4266-8FB6-42B7-B533-DF8FCE80B3EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF9C4266-8FB6-42B7-B533-DF8FCE80B3EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {278810DD-8F4A-461A-A7CE-92AC08CA305D}
+	EndGlobalSection
+EndGlobal
