@@ -21,7 +21,7 @@ namespace UpcastingDowncasting.Entities
         public void Loan(double amount)
         {
 
-            if (amount <= LoanLimit) 
+            if (amount <= LoanLimit)
             {
                 Balance += amount;
             }
