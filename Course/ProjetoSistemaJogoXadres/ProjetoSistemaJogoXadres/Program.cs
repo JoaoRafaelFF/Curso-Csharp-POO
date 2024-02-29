@@ -7,33 +7,59 @@ namespace ProjetoSistemaJogoXadres
         static void Main(string[] args)
         {
             //testes 
-            try
+            /* try
+             {
+                 Tabuleiro tab = new Tabuleiro(8, 8);
+
+                 tab.colocarPecas(new Torre(tab, Cor.Preta), new Posicao(0, 0));
+                 //tab.colocarPecas(new Rei(tab, Cor.Preta), new Posicao(0, 0)); //dispara validacao já existe peca se ativo 
+                 //tab.colocarPecas(new Rei(tab, Cor.Preta), new Posicao(0, 9)); //dispara validacao posicao invalida se ativo 
+                 tab.colocarPecas(new Torre(tab, Cor.Preta), new Posicao(1, 3));
+                 tab.colocarPecas(new Rei(tab, Cor.Preta), new Posicao(2, 4));
+                 tab.colocarPecas(new Rei(tab, Cor.Branca), new Posicao(4, 4));
+                 tab.colocarPecas(new Rei(tab, Cor.Branca), new Posicao(6, 6));
+
+                 Tela.imprimirTabuleiro(tab);
+             }
+
+             catch (TabuleiroException e)
+             {
+                 Console.WriteLine(e.Message);
+             }
+            */
+
+            /* 
+             PosicaoXadrez pos = new PosicaoXadrez('c', 7);
+
+             Console.WriteLine(pos);
+
+             Console.WriteLine(pos.toPosicao());
+            */
+            try 
             {
-                Tabuleiro tab = new Tabuleiro(8, 8);
+                PartidaDeXadrez partida = new PartidaDeXadrez();
 
-                tab.colocarPecas(new Torre(tab, Cor.Preta), new Posicao(0, 0));
-                //tab.colocarPecas(new Rei(tab, Cor.Preta), new Posicao(0, 0)); //dispara validacao já existe peca se ativo 
-                //tab.colocarPecas(new Rei(tab, Cor.Preta), new Posicao(0, 9)); //dispara validacao posicao invalida se ativo 
-                tab.colocarPecas(new Torre(tab, Cor.Preta), new Posicao(1, 3));
-                tab.colocarPecas(new Rei(tab, Cor.Preta), new Posicao(2, 4));
-                tab.colocarPecas(new Rei(tab, Cor.Branca), new Posicao(4, 4));
-                tab.colocarPecas(new Rei(tab, Cor.Branca), new Posicao(6, 6));
+                while (!partida.terminada)
+                {
+                    Console.Clear();
+                    Tela.imprimirTabuleiro(partida.tab);
+                    Console.Write("Origem: ");
+                    Posicao origem = Tela.lerPosicaoXadrez().toPosicao();
+                    Console.Write("Destino: ");
+                    Posicao destino = Tela.lerPosicaoXadrez().toPosicao();
 
-                Tela.imprimirTabuleiro(tab);
+                    partida.executaMovimento(origem, destino);
+                }
+
+               
+
             }
-
             catch (TabuleiroException e)
             {
                 Console.WriteLine(e.Message);
             }
 
-           /* 
-            PosicaoXadrez pos = new PosicaoXadrez('c', 7);
 
-            Console.WriteLine(pos);
-
-            Console.WriteLine(pos.toPosicao());
-           */
             Console.ReadLine();
 
         }
