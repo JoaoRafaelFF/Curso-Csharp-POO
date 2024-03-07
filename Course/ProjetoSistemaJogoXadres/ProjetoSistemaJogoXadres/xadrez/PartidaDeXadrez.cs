@@ -13,7 +13,7 @@ namespace xadrez
         public Tabuleiro tab { get; private set; }
         public int turno { get; private set; }
         public Cor jogadorAtual { get; private set; }
-        public bool terminada {  get; private set; }
+        public bool terminada { get; private set; }
 
         public PartidaDeXadrez()
         {
@@ -32,9 +32,9 @@ namespace xadrez
             tab.colocarPecas(p, destino);
         }
 
-        public void realizaJogada(Posicao origem,Posicao destino)
+        public void realizaJogada(Posicao origem, Posicao destino)
         {
-            executaMovimento(origem,destino);
+            executaMovimento(origem, destino);
             turno++;
             mudaJogador();
         }
@@ -45,7 +45,7 @@ namespace xadrez
             {
                 throw new TabuleiroException("Não existe peça na posição de origem escolhida!");
             }
-            if (jogadorAtual != tab.peca(pos).cor) 
+            if (jogadorAtual != tab.peca(pos).cor)
             {
                 throw new TabuleiroException("A peça de origem escolhida não é sua!");
             }
@@ -55,21 +55,21 @@ namespace xadrez
             }
         }
 
-        public void validarPosicaoDeDestino(Posicao origem, Posicao destino) 
+        public void validarPosicaoDeDestino(Posicao origem, Posicao destino)
         {
             if (!tab.peca(origem).podeMoverPara(destino))
-            { 
+            {
                 throw new TabuleiroException("Posição de destino invlaida!");
             }
         }
 
-        private void mudaJogador() 
+        private void mudaJogador()
         {
-        if (jogadorAtual == Cor.Branca) 
+            if (jogadorAtual == Cor.Branca)
             {
                 jogadorAtual = Cor.Preta;
             }
-            else 
+            else
             {
                 jogadorAtual = Cor.Branca;
             }

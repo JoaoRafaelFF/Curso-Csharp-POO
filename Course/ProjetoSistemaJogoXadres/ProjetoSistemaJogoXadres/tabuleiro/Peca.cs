@@ -33,7 +33,7 @@ namespace tabuleiro
                 for (int j = 0; j < tab.colunas; j++)
                 {
                     if (mat[i, j])
-                    { 
+                    {
                         return true;
                     }
                 }
@@ -41,7 +41,7 @@ namespace tabuleiro
             return false;
         }
 
-        public bool podeMoverPara(Posicao pos) 
+        public bool podeMoverPara(Posicao pos)
         {
             return movimentosPossiveis()[pos.linha, pos.coluna];
         }

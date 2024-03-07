@@ -6,7 +6,7 @@ namespace ProjetoSistemaJogoXadres
     {
         static void Main(string[] args)
         {
-            try 
+            try
             {
                 PartidaDeXadrez partida = new PartidaDeXadrez();
 
@@ -44,7 +44,7 @@ namespace ProjetoSistemaJogoXadres
                         Console.ReadLine();
                     }
                 }
-               
+
 
             }
             catch (TabuleiroException e)
