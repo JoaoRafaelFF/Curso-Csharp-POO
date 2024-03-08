@@ -18,6 +18,13 @@ namespace ProjetoSistemaJogoXadres
             Console.WriteLine();
             Console.WriteLine("Turno:" + partida.turno);
             Console.WriteLine("Aguardando Jogada: " + partida.jogadorAtual);
+            if (partida.xeque)
+            {
+                ConsoleColor aux = Console.ForegroundColor;
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Voce esta em xeque!");
+                Console.ForegroundColor = aux;
+            }
         }
 
         public static void imprimirPecasCapituradas(PartidaDeXadrez partida)
