@@ -17,14 +17,27 @@ namespace ProjetoSistemaJogoXadres
             imprimirPecasCapituradas(partida);
             Console.WriteLine();
             Console.WriteLine("Turno:" + partida.turno);
-            Console.WriteLine("Aguardando Jogada: " + partida.jogadorAtual);
-            if (partida.xeque)
+            if (!partida.terminada)
+            {
+
+                Console.WriteLine("Aguardando Jogada: " + partida.jogadorAtual);
+                if (partida.xeque)
+                {
+                    ConsoleColor aux = Console.ForegroundColor;
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Voce esta em xeque!");
+                    Console.ForegroundColor = aux;
+                }
+            }
+            else
             {
                 ConsoleColor aux = Console.ForegroundColor;
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Voce esta em xeque!");
+                Console.WriteLine("XEQUEMATE!!!!");
                 Console.ForegroundColor = aux;
+                Console.WriteLine("Vencedor: " +partida.jogadorAtual);
             }
+
         }
 
         public static void imprimirPecasCapituradas(PartidaDeXadrez partida)
@@ -37,7 +50,7 @@ namespace ProjetoSistemaJogoXadres
             ConsoleColor aux = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Yellow;
             imprimirConjunto(partida.pecasCapturadas(Cor.Preta));
-            Console.ForegroundColor= aux;
+            Console.ForegroundColor = aux;
             Console.WriteLine();
         }
 
